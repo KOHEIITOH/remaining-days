@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>今年の残り日数</title>
+</head>
+<body>
+  <h1 id="daysLeft"></h1>
+
+  <script>
+    const today = new Date(),
+          endYear = new Date(today.getFullYear(), 11, 31),
+          msPerDay = 24 * 60 * 60 * 1000,
+          daysLeft = (endYear.getTime() - today.getTime()) / msPerDay,
+          formatDaysLeft = Math.round(daysLeft);
+
+    document.getElementById("daysLeft").innerHTML = "今年の残り日数：" + formatDaysLeft + "日";
+  </script>
+</body>
+</html>
