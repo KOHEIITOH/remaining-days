@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>今年の残り日数</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今年の残日数</title>
+
+  <!-- CSSファイル読み込み -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p id="today"></p>
-  <h1 id="daysLeft"></h1>
+  <p id="today" class="text date"></p>
+  <p id="daysLeft" class="text days"></p>
 
-  <script>
-    const today = new Date(),
-          year = today.getFullYear(),
-          month = ("0" + (today.getMonth() + 1)).slice(-2), // JavaScriptでは月は0から始まるため1を足す
-          date = ("0" + today.getDate()).slice(-2), // 日にちが一桁のときに二桁表示にするため
-          week = ["日", "月", "火", "水", "木", "金", "土"],
-          dayOfWeek = week[today.getDay()],
-          formattedDate = year + "年" + month + "月" + date + "日 （" + dayOfWeek + "）",
-          endYear = new Date(today.getFullYear(), 11, 31),// JavaScriptでは年は0から始まるため11は12月を表す
-          msPerDay = 24 * 60 * 60 * 1000,
-          daysLeft = (endYear.getTime() - today.getTime()) / msPerDay,
-          formatDaysLeft = Math.round(daysLeft);
-
-    document.getElementById("today").innerHTML = formattedDate;
-    document.getElementById("daysLeft").innerHTML = "今年の残り日数：" + formatDaysLeft + "日";
-  </script>
+  <!-- JavaScriptファイル読み込み -->
+  <script src="index.js"></script>
 </body>
 </html>

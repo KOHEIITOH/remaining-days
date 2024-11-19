@@ -1,0 +1,34 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #15151e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  font-family: 'Share Tech Mono', monospace;
+  color: #daf6ff;
+  text-shadow: 0 0 20px #0aafe6;
+  line-height: 1.2;
+  text-align: center;
+}
+.date {
+  font-size: 25px;
+}
+.days {
+  font-size: 100px;
+}
+
+/* スマホ */
+@media screen and (max-width: 500px) {
+  .date {
+    font-size: 5vw;
+  }
+  .days {
+    font-size: 8vw;
+  }
+}
