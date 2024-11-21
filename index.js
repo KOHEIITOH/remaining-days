@@ -1,3 +1,15 @@
+// 初期ロード時にビューポートの高さを計算
+let vh = window.innerHeight * 0.01;
+// ビューポートの高さを基にしたCSS変数を設定
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// ウィンドウのリサイズ時にも再計算
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+//残日数の算出
 let today = new Date();
 today.setHours(0,0,0,0);
 
