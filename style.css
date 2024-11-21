@@ -3,7 +3,6 @@ body {
   padding: 0;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
-  min-height: 100vh;
   background-color: #15151e;
   display: flex;
   flex-direction: column;
