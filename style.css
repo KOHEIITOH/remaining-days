@@ -26,6 +26,11 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @keyframes blink {
   0% {opacity: 1.0;}
   50% {opacity: 0.0;}
