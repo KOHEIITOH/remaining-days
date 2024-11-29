@@ -26,3 +26,10 @@ const year = today.getFullYear(),
 
 document.getElementById("today").innerHTML = format_date;
 document.getElementById("fy-days").innerHTML = format_fiscal_remaining_days;// 今年度の残日数
+
+// 日数のクリック
+const item = document.querySelector('.days');
+
+item.addEventListener('click', function() {
+    item.classList.toggle('days-animation');
+});
