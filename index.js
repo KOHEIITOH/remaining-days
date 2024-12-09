@@ -21,8 +21,10 @@ const year = today.getFullYear(),
       format_date = year + "." + month + "." + date + " " + day_of_week,
       end_year = new Date(today.getFullYear(), 11, 31),// JavaScriptでは年は0から始まるため11は12月を表す
       ms_per_day = 24 * 60 * 60 * 1000,
-      float_remaining_days = (end_year.getTime() - today.getTime()) / ms_per_day,
-      format_calendar_remaining_days = Math.ceil(float_remaining_days);
+      float_remaining_days = (end_year.getTime() - today.getTime()) / ms_per_day;
+let format_calendar_remaining_days = Math.ceil(float_remaining_days);
+
+format_calendar_remaining_days += 1;// 今日を含める
 
 document.getElementById("today").innerHTML = format_date;
 document.getElementById("cy-days").innerHTML = format_calendar_remaining_days;// 今年の残日数
@@ -31,5 +33,5 @@ document.getElementById("cy-days").innerHTML = format_calendar_remaining_days;//
 const item = document.querySelector('.days');
 
 item.addEventListener('click', function() {
-    item.classList.toggle('days-animation');
+  item.classList.toggle('days-animation');
 });

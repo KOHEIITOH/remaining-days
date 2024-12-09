@@ -21,8 +21,10 @@ const year = today.getFullYear(),
       format_date = year + "." + month + "." + date + " " + day_of_week,
       fiscal_year_end = today.getMonth() >= 3 ? today.getFullYear() + 1 : today.getFullYear(),
       end_of_fiscal_year = new Date(fiscal_year_end, 2, 31),
-      fiscal_diff = end_of_fiscal_year.getTime() - today.getTime(),
-      format_fiscal_remaining_days = Math.ceil(fiscal_diff / (24 * 60 * 60 * 1000));
+      fiscal_diff = end_of_fiscal_year.getTime() - today.getTime();
+let format_fiscal_remaining_days = Math.ceil(fiscal_diff / (24 * 60 * 60 * 1000));
+
+format_fiscal_remaining_days += 1;// 今日を含める
 
 document.getElementById("today").innerHTML = format_date;
 document.getElementById("fy-days").innerHTML = format_fiscal_remaining_days;// 今年度の残日数
@@ -31,5 +33,5 @@ document.getElementById("fy-days").innerHTML = format_fiscal_remaining_days;// �
 const item = document.querySelector('.days');
 
 item.addEventListener('click', function() {
-    item.classList.toggle('days-animation');
+  item.classList.toggle('days-animation');
 });
