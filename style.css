@@ -36,9 +36,9 @@ a {
   50% {opacity: 0.0;}
   100% {opacity: 1.0;}
 }
-.days-animation {
+/* .days-animation {
   animation: blink 3s infinite;
-}
+} */
 
 /* スマホ */
 @media screen and (max-width: 500px) {
