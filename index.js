@@ -35,3 +35,13 @@ const item = document.querySelector('.days');
 item.addEventListener('click', function() {
   item.classList.toggle('days-animation');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const todayEl = document.getElementById('today');
+  if (todayEl) {
+    todayEl.style.cursor = 'pointer';
+    todayEl.addEventListener('click', () => {
+      location.href = 'my_clock.html';
+    });
+  }
+});
